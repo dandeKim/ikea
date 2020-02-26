@@ -1,0 +1,10 @@
+.shadow {
+  -webkit-filter: drop-shadow(0px 0px 5px rgba(255, 242, 170, 0.7));
+  filter: drop-shadow(0px 0px 5px rgba(255, 242, 170, 0.7));
+}
+circle{
+  stroke: #FFFBF3;
+}
+g circle.active{
+  stroke: #ffee5a;
+}

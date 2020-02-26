@@ -1,0 +1,157 @@
+.container {
+  padding: 0 40px;
+}
+.pc_only {
+  display: none;
+}
+.t_only {
+  display: block;
+}
+.m_only {
+  display: none;
+}
+
+header .search_keyword {
+  display: none;
+}
+header .header_box .header_rightbox {
+  width: initial;
+}
+header .gnb .container .all_products_list > li.active .all_products_list_child {
+  /* width: 400px; */
+  height: 540px;
+  overflow-y: auto;
+}
+.gnb .container .all_products_list > li.active .all_products_list_child div {
+  flex: 0 1 50%;
+  margin-bottom: 30px;
+}
+.gnb .container .all_products_list > li.active .all_products_list_child {
+  flex-wrap: wrap;
+}
+
+.best_products .best_products_list .best_product dt,
+.best_products .best_products_list .best_product dd {
+  margin-left: 20px;
+}
+.best_products .best_products_list .best_product dd:nth-of-type(1) {
+  margin: 7px 0 15px 20px;
+}
+.best_products .product_img {
+  width: 90%;
+}
+
+.new_products .new_products_list .new_product dl {
+  margin-left: 20px;
+}
+
+.todays_place .place_box {
+  flex-direction: column;
+}
+.place_img {
+  margin: auto;
+  width: 90%;
+}
+.todays_place .place_box .place_product_box .place_product {
+  display: none;
+}
+.todays_place .place_box .place_product_box .place_product.active{
+  z-index: 20;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  background: #fff;
+  box-shadow: 0px 0px 6px #d6d6d6;
+  padding: 70px 50px 50px;
+}
+.todays_place .place_box .place_product_box .place_product.active button.close {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.todays_place .place_box .place_product_box .place_more_product {
+  position: absolute;
+  top: 45px;
+  right: 9%;
+}
+.todays_place .place_box .place_product_box {
+  margin: 30px auto 0;
+  width: 460px;
+}
+
+.ikea_store .container {
+  flex-direction: column;
+}
+.ikea_store .container div {
+  width: 80%;
+  margin: auto;
+}
+.banner_clock img {
+  left: 70%;
+}
+.banner_clock .banner_text {
+  width: 100%;
+  left: 80%;
+}
+
+.banner_price {
+  background: url(../img/banner_m2.jpg) center bottom no-repeat;
+  height: 400px;
+  background-size: cover;
+}
+.banner_price .container {
+  top: 40%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+}
+.banner_price .container button:hover {
+  color: #009d68;
+}
+
+.ikea_service .service_circle {
+  width: 150px;
+  height: 150px;
+}
+
+.ikea_info {
+  display: block;
+}
+
+.ikea_info.container {
+  height: 100%;
+  margin-bottom: 100px;
+}
+.ikea_info .info_box .info_store {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.ikea_info .news_box {
+  padding: 30px 20px;
+}
+.ikea_info .news_box > a {
+  right: 20px;
+}
+.ikea_info .news_box h2 {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 900px){
+  .best_products .best_products_list .best_product {
+    width: 190px;
+  }
+  .new_products .swiper-button-next:after, .new_products .swiper-button-prev:after{
+    display: none;
+  }
+}
+.bg_cover{
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+}
+

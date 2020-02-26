@@ -1,0 +1,495 @@
+/* common ============================== */
+.container {
+  padding: 0 20px;
+}
+.m_blind {
+  display: none !important;
+}
+.pc_only {
+  display: none;
+}
+.t_only {
+  display: none;
+}
+.m_only {
+  display: block;
+}
+
+/* header ============================== */
+.m_header_box {
+  z-index: 100;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.m_header_box .m_header_icon {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.m_header_box .m_header_icon button {
+  font-size: 35px;
+  color: #0057a2;
+  padding: 0;
+}
+.m_header_box h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+}
+.m_header_box h1 a {
+  display: block;
+}
+.m_header_right_icon {
+  position: relative;
+}
+.m_search_box {
+  display: none;
+  z-index: 10;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 55px;
+  background: #fff;
+}
+.m_search_box.active {
+  display: block;
+}
+.m_search_box .header_search {
+  position: relative;
+  text-align: center;
+  padding: 0;
+}
+.m_search_box .header_search input {
+  outline: none;
+  width: 90%;
+  height: 35px;
+  border-radius: 30px;
+  border: 1px solid #a3a3a3;
+  margin-top: 10px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.header_search .searched_keywords {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 10px 0;
+}
+.header_search .searched_keywords span {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  width: 50%;
+  margin: 0 auto;
+}
+.header_search .searched_keywords span.empty_keyword {
+  display: block;
+}
+.header_search .searched_keywords span button {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  font-size: 18px;
+  color: #a9a9a9;
+}
+/* gnb ================================ */
+.gnb {
+  z-index: 3;
+  position: fixed;
+  display: none;
+}
+
+.gnb .gnb_bg {
+  top: 60px;
+  width: 300px;
+  overflow-y: auto;
+  box-shadow: none;
+}
+
+.gnb .container .gnb_list {
+  overflow: hidden;
+}
+
+.gnb .container .all_products_list {
+  display: none;
+  top: 60px;
+  left: 0;
+  border: 0;
+  width: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.gnb .container .all_products_list > li {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  transition: 0.5s;
+}
+
+.gnb .gnb_active_product {
+  z-index: 1;
+  display: none;
+  background: #0057a2;
+}
+.gnb .container .all_products_list > li.active {
+  height: auto;
+}
+.gnb .container .all_products_list > li.active a {
+  position: absolute;
+  top: -2px;
+  color: #fff;
+  font-weight: 400;
+}
+.gnb .container .all_products_list > li img {
+  position: absolute;
+  top: 5px;
+}
+.gnb .gnb_active_product::after {
+  display: none;
+}
+.gnb .container .all_products_list > li i {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  display: block;
+  transition: transform 0.5s;
+  transform: translateY(-50%) rotate(0);
+  color: #0057a2;
+  font-size: 20px;
+}
+.gnb .container .all_products_list > li i.active {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.gnb .container .all_products_list > li i.sp {
+  left: 18px;
+}
+.gnb .container .all_products_list > li.active i {
+  color: #fff;
+  top: 25px;
+}
+header .gnb .container .all_products_list > li.active .all_products_list_child {
+  position: relative;
+  top: 0;
+  left: -20px;
+  display: block;
+  width: 300px;
+  height: initial;
+  margin-top: 50px;
+  overflow: initial;
+}
+header
+  .gnb
+  .container
+  .all_products_list
+  > li.active
+  .all_products_list_child
+  div {
+  border-bottom: 1px solid #f3f3f3;
+  width: 300px;
+  margin-bottom: 0;
+}
+header
+  .gnb
+  .container
+  .all_products_list
+  > li.active
+  .all_products_list_child
+  div:last-child {
+  border-bottom: none;
+}
+.gnb .container .all_products_list > li.active .all_products_list_child ul {
+  display: none;
+}
+.gnb .container .all_products_list > li.active .all_products_list_child h3 {
+  margin: 5px 80px;
+}
+.gnb .container .all_products_list > li.active .all_products_list_child h3 a {
+  position: initial;
+  margin: 20px 0;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.gnb .container .all_products_list > li > a {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding-left: 60px;
+  box-sizing: border-box;
+}
+
+.m_menu_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* open_m_menu ========================= */
+.open_m_menu .gnb,
+.open_m_menu .gnb .container .all_products_list,
+.open_m_menu .gnb .gnb_bg,
+.open_m_menu .m_menu_bg {
+  display: block;
+}
+
+/* main_slide ========================= */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  display: none;
+}
+.main-slide img {
+  margin-top: 60px;
+}
+/* best_product ======================= */
+.best_products h2 {
+  font-size: 20px;
+  margin: 50px 0 40px;
+}
+.best_products ul li {
+  margin: 0 13px;
+}
+/* new_product ======================== */
+.new_products h2 {
+  font-size: 20px;
+  margin: 75px 0 50px;
+}
+
+/* banner1 ============================ */
+.banner_clock {
+  margin: 75px 0;
+  height: 100%;
+}
+.banner_clock img {
+  position: relative;
+  width: 100%;
+}
+.banner_clock .banner_text {
+  left: 40%;
+}
+.banner_clock .banner_text span:nth-of-type(1) {
+  font-size: 12px;
+}
+.banner_clock .banner_text span:nth-of-type(1) em {
+  padding: 4px 7px;
+}
+.banner_clock .banner_text h2 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+.banner_clock .banner_text button {
+  font-size: 12px;
+}
+
+/* today's place =================== */
+.place_img {
+  width: 100%;
+}
+.todays_place .place_box .place_product_box {
+  width: 100%;
+}
+.todays_place .place_box .place_product_box .thumb_img a {
+  width: 30%;
+}
+.todays_place .place_box .place_product_box .thumb_img img {
+  width: 100%;
+  box-sizing: border-box;
+}
+.todays_place .place_box .place_product_box .place_more_product {
+  right: 20px;
+  top: 40px;
+}
+.todays_place h2 {
+  margin: 0 0 50px;
+  font-size: 20px;
+}
+
+/* ikea store ============================= */
+.ikea_store .container div {
+  width: 100%;
+  height: 230px;
+}
+.ikea_store h2 {
+  font-size: 20px;
+  margin: 75px 0 50px;
+}
+.ikea_store .container > div h3 {
+  font-size: 22px;
+}
+.ikea_store .container > div span {
+  font-size: 14px;
+  line-height: 20px;
+}
+.ikea_store .container .ikea_food h3::after {
+  margin: 12px 0 12px auto;
+}
+.ikea_store .container > div h3::after {
+  margin: 12px 0;
+}
+/* banner2 ============================ */
+.banner_price {
+  background-color: #009d68;
+  height: 360px;
+  margin-top: 75px;
+}
+.banner_price .container {
+  left: 260px;
+  width: 364px;
+}
+.banner_price .container h2 {
+  font-size: 26px;
+}
+/* ikea_service ======================== */
+.ikea_service {
+  margin: 75px auto;
+}
+.ikea_service span {
+  font-size: 14px;
+  margin-top: 15px;
+}
+.ikea_service .service_circle {
+  width: 120px;
+  height: 120px;
+}
+
+/* ikea_info =========================== */
+.ikea_info.container {
+  margin-bottom: 50px;
+}
+.ikea_info h2 {
+  font-size: 22px;
+}
+.ikea_info .info_box div {
+  padding: 25px;
+  height: 160px;
+}
+.ikea_info .info_box button {
+  font-size: 14px;
+}
+.ikea_info .info_box .info_store h2 img {
+  width: 80px;
+}
+.ikea_info .info_box .info_customer span:nth-of-type(2) {
+  position: absolute;
+  bottom: 25px;
+}
+.ikea_info .info_box .info_customer span:nth-of-type(1) {
+  font-size: 22px;
+  margin: 10px 0;
+}
+.ikea_info .info_box .info_customer span:nth-of-type(2),
+.ikea_info .info_box .info_store span {
+  font-size: 12px;
+  line-height: 15px;
+}
+.ikea_info .info_box .info_customer button,
+.ikea_info .info_box .info_store button {
+  right: 25px;
+  bottom: 25px;
+}
+.ikea_info .info_box .info_customer button:first-of-type {
+  right: 25px;
+  bottom: 80px;
+}
+.ikea_info .news_box {
+  padding: 0;
+}
+.ikea_info .news_box h2 {
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+.ikea_info .news_box .news_list a {
+  font-size: 12px;
+}
+.ikea_info .news_box > a {
+  top: 5px;
+  right: 0;
+  font-size: 12px;
+}
+.ikea_info .news_box .news_list span {
+  margin-bottom: 10px;
+  font-size: 12px;
+  padding-top: 0px;
+}
+/* footer ============================== */
+footer {
+  padding: 25px 0;
+  font-size: 10px;
+}
+footer .footer_info {
+  text-align: center;
+}
+footer .footer_info p {
+  margin-bottom: 0;
+}
+footer .footer_info p:last-of-type {
+  position: initial;
+  margin: 0 0 15px;
+}
+footer .footer_info ul {
+  position: initial;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .banner_price {
+    height: 230px;
+  }
+  .banner_price .container {
+    left: 220px;
+  }
+  .banner_price .container h2 {
+    font-size: 20px;
+  }
+  .banner_price .container span {
+    font-size: 12px;
+  }
+  .banner_price .container button {
+    font-size: 12px;
+  }
+
+  .ikea_service span {
+    font-size: 12px;
+  }
+  .ikea_service .service_circle {
+    width: 90px;
+    height: 90px;
+    box-sizing: border-box;
+  }
+
+  .ikea_info .info_box button {
+    width: 115px;
+    font-size: 13px;
+  }
+  .ikea_info.container {
+    padding: 0;
+  }
+  .ikea_info .news_box {
+    padding: 0 20px;
+  }
+  .ikea_info .news_box > a {
+    right: 20px;
+  }
+}

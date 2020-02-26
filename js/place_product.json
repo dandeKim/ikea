@@ -1,0 +1,107 @@
+[
+  {
+    "id": "p1-1",
+    "img": "img/today/p1-1.jpg",
+    "name": "NIKKEBY 니케뷔",
+    "product": "4칸 서랍장",
+    "price": "99,900"
+  },
+  {
+    "id": "p1-2",
+    "img": "img/today/p1-2.jpg",
+    "name": "NIKKEBY 니케뷔",
+    "product": "옷걸이행거",
+    "price": "79,900"
+  },
+  {
+    "id": "p1-3",
+    "img": "img/today/p1-3.jpg",
+    "name": "FLOTTEBO 플로테보",
+    "product": "소파베드+보조테이블",
+    "price": "749,000"
+  },
+  {
+    "id": "p1-4",
+    "img": "img/today/p1-4.jpg",
+    "name": "SLIPSTEN 슬립스텐",
+    "product": "벽시계",
+    "price": "19,900"
+  },
+  {
+    "id": "p1-5",
+    "img": "img/today/p1-5.jpg",
+    "name": "KARLJAN 칼리안",
+    "product": "의자",
+    "price": "49,900"
+  },
+  {
+    "id": "p2-1",
+    "img": "img/today/p2-1.jpg",
+    "name": "LIXHULT 릭스훌트",
+    "product": "수납콤비네이션",
+    "price": "79,900"
+  },
+  {
+    "id": "p2-2",
+    "img": "img/today/p2-2.jpg",
+    "name": "ÖRFJÄLL 외르피엘",
+    "product": "회전의자",
+    "price": "79,900"
+  },
+  {
+    "id": "p2-3",
+    "img": "img/today/p2-3.jpg",
+    "name": "ALGOT 알고트",
+    "product": "벽고정대/선반",
+    "price": "155,000"
+  },
+  {
+    "id": "p2-4",
+    "img": "img/today/p2-4.jpg",
+    "name": "GURLI 굴리",
+    "product": "쿠션커버",
+    "price": "3,900"
+  },
+  {
+    "id": "p2-5",
+    "img": "img/today/p2-5.jpg",
+    "name": "TERTIAL 테르티알",
+    "product": "작업등",
+    "price": "19,900"
+  },
+  {
+    "id": "p3-1",
+    "img": "img/today/p3-1.jpg",
+    "name": "EVEDAL 에베달",
+    "product": "플로어스탠드",
+    "price": "329,000"
+  },
+  {
+    "id": "p3-2",
+    "img": "img/today/p3-2.jpg",
+    "name": "BEKANT 베칸트",
+    "product": "높이조절책상",
+    "price": "659,000"
+  },
+  {
+    "id": "p3-3",
+    "img": "img/today/p3-3.jpg",
+    "name": "FJÄLLBERGET 피엘베리에트",
+    "product": "회의의자",
+    "price": "249,000"
+  },
+  {
+    "id": "p3-4",
+    "img": "img/today/p3-4.jpg",
+    "name": "FJÄLLA 피엘라",
+    "product": "수납상자+뚜껑",
+    "price": "7,900"
+  },
+  {
+    "id": "p3-5",
+    "img": "img/today/p3-5.jpg",
+    "name": "ALEX 알렉스",
+    "product": "9칸서랍유닛",
+    "price": "149,000"
+  }
+]
