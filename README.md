@@ -62,21 +62,21 @@
     - 3초 간격으로 함수 실행
 
 ``` javascript
-function searchRolling() {
-  $(".search_keyword_list")
-    .stop(true)
-    .animate({
-        "margin-top": -21
-    },
-    function() {
-        $(".search_keyword_list li").first().appendTo(".search_keyword_list");
-        $(".search_keyword_list li").removeClass("active");
-        $(".search_keyword_list li").first().addClass("active");
-        $(".search_keyword_list").css("margin-top", 0);
-    });
-}
+    function searchRolling() {
+    $(".search_keyword_list")
+        .stop(true)
+        .animate({
+            "margin-top": -21
+        },
+        function() {
+            $(".search_keyword_list li").first().appendTo(".search_keyword_list");
+            $(".search_keyword_list li").removeClass("active");
+            $(".search_keyword_list li").first().addClass("active");
+            $(".search_keyword_list").css("margin-top", 0);
+        });
+    }
 
-var play = setInterval(searchRolling, 3000);
+    var play = setInterval(searchRolling, 3000);
 ```
 
 - 그 외 함수들
@@ -102,26 +102,26 @@ var play = setInterval(searchRolling, 3000);
     - `windowW < 900`일 때 swiper 객체 생성
     - 클릭한 메뉴의 상품을 `productList` 배열에서 찾아 반복문을 통해 출력
     ```javascript
-    for (const i in productList[index]) {
-        $(".best_products_list .swiper-wrapper").append(`
-            <div class="best_product swiper-slide">
-                <div class="product_img">
-                    <a href="#!"><img src="${productList[index][i].img}" alt="">
-                        <span class="blind">${productList[index][i].name}<span>
-                    </a>
-                    <div class="product_hover_bg">
-                        <button class="material-icons like">favorite_border</button>
-                        <button class="material-icons-outlined cart">shopping_cart</button>
+        for (const i in productList[index]) {
+            $(".best_products_list .swiper-wrapper").append(`
+                <div class="best_product swiper-slide">
+                    <div class="product_img">
+                        <a href="#!"><img src="${productList[index][i].img}" alt="">
+                            <span class="blind">${productList[index][i].name}<span>
+                        </a>
+                        <div class="product_hover_bg">
+                            <button class="material-icons like">favorite_border</button>
+                            <button class="material-icons-outlined cart">shopping_cart</button>
+                        </div>
                     </div>
+                    <dl>
+                        <dt>${productList[index][i].shop}</dt>
+                        <dd>${productList[index][i].name}</dd>
+                        <dd>${numberWithCommas(productList[index][i].price)}원</dd>
+                    </dl>
                 </div>
-                <dl>
-                    <dt>${productList[index][i].shop}</dt>
-                    <dd>${productList[index][i].name}</dd>
-                    <dd>${numberWithCommas(productList[index][i].price)}원</dd>
-                </dl>
-            </div>
-        `);
-    }
+            `);
+        }
     ```
     - 초기에는 첫 번째 메뉴(가구)의 상품을 보여줌 `$(".best_products li").eq(0).click();`
 
@@ -139,34 +139,34 @@ var play = setInterval(searchRolling, 3000);
 
 - `placeProduct()` : AJAX통신으로 JSON파일을 불러와 id가 일치하는 상품을 출력 
 ``` javascript
-function placeProduct(id) {
-  $.ajax({
-    url: "js/place_product.json",
-    success: function(data){
-      for (const i in data){
-        if (data[i].id === id){
-            $(".place_product").empty();
-            $(".place_product").prepend(`
-                <div class="product_img">
-                    <a href="#"><img src=${data[i].img} alt=""><span class="blind">${data[i].product}<span></a>
-                    <div class="product_hover_bg">
-                        <button class="material-icons like">favorite_border</button>
-                        <button class="material-icons-outlined cart">shopping_cart</button>
-                    </div>
-                </div>
-                <dl>
-                    <dt>${data[i].name}</dt>
-                    <dd>${data[i].product}</dd>
-                    <dd>${data[i].price}원</dd>
-                </dl>
-                <button class="material-icons close">close</button>
-            `);
-            break;
-        }
-      }
+    function placeProduct(id) {
+        $.ajax({
+            url: "js/place_product.json",
+            success: function(data){
+            for (const i in data){
+                if (data[i].id === id){
+                    $(".place_product").empty();
+                    $(".place_product").prepend(`
+                        <div class="product_img">
+                            <a href="#"><img src=${data[i].img} alt=""><span class="blind">${data[i].product}<span></a>
+                            <div class="product_hover_bg">
+                                <button class="material-icons like">favorite_border</button>
+                                <button class="material-icons-outlined cart">shopping_cart</button>
+                            </div>
+                        </div>
+                        <dl>
+                            <dt>${data[i].name}</dt>
+                            <dd>${data[i].product}</dd>
+                            <dd>${data[i].price}원</dd>
+                        </dl>
+                        <button class="material-icons close">close</button>
+                    `);
+                    break;
+                }
+            }
+            }
+        });
     }
-  });
-}
 ```
 
 - 그 외 함수들
