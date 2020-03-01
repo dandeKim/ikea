@@ -17,7 +17,7 @@
     - HTML, CSS(SASS), JavaScript, Jquery 
 
 - [기존 사이트](https://www.ikea.com/kr/ko/)
-- [리뉴얼 사이트](https://imdande.github.io/ikea/)
+- [리뉴얼 사이트](https://ofkande.github.io/ikea/)
 
 ## ikea.js
 - **Main Slide** : swiper 플러그인 사용
@@ -28,21 +28,21 @@
     (mobile에서는 초기 active를 제거)
 
 ```javascript
-$(".all_products_list li").click(function(e) {
-    e.preventDefault();
-    if ($(this).hasClass("active") && $(window).innerWidth() < 767) {
-        $(this).removeClass("active");
-    } else {
+    $(".all_products_list li").on("click", function(e) {
+        e.preventDefault();
+        if ($(this).hasClass("active") && $(window).innerWidth() < 767) {
+            $(this).removeClass("active");
+        } else {
         $(".all_products_list li").removeClass("active");
-        $(this).addClass("active");
-        var menuTop = $(this).position().top;
-        var scrollTop = $(".all_products_list").scrollTop();
-        $(".gnb_active_product").css({
-            top: menuTop + scrollTop
-        });
-    }
-    changeListWidth();
-});
+            $(this).addClass("active");
+            var menuTop = $(this).position().top;
+            var scrollTop = $(".all_products_list").scrollTop();
+            $(".gnb_active_product").css({
+                top: menuTop + scrollTop
+            });
+        }
+        changeListWidth();
+    });
 ```
 - **GNB(mobile)**
     - 범위 : `$(window).innerWidth() < 767`
