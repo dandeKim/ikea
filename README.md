@@ -1,8 +1,7 @@
 # IKEA
 
-![ikea_pc](https://user-images.githubusercontent.com/60219368/76086719-00e8b400-5ff8-11ea-9e00-cfaf3ca898bc.jpg) {: width="80%"}
-
-![ikea_m](https://user-images.githubusercontent.com/60219368/76086804-31c8e900-5ff8-11ea-9af1-98ac508cba00.jpg) {: width="20%"} 
+<img src="https://user-images.githubusercontent.com/60219368/76086719-00e8b400-5ff8-11ea-9e00-cfaf3ca898bc.jpg" width="80%" title="ikea_pc" alt="ikea_pc"></img>
+<img src="https://user-images.githubusercontent.com/60219368/76086804-31c8e900-5ff8-11ea-9af1-98ac508cba00.jpg" width="20%" title="ikea_mobile" alt="ikea_mobile"></img>
 
 ## index
 
@@ -24,8 +23,8 @@
     - 메인 페이지
     - 로그인 페이지
 
-- [기존 사이트](https://www.ikea.com/kr/ko/) {: target="_blank"}
-- [리뉴얼 사이트](https://ofkande.github.io/ikea/) {: target="_blank"}
+- <a href="https://www.ikea.com/kr/ko/" target="blank">기존 사이트</a>
+- <a href="https://ofkande.github.io/ikea/" target="blank">리뉴얼 사이트</a>
 
 ## ikea.js
 - **Main Slide** : swiper 플러그인 사용
