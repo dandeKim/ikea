@@ -1,6 +1,6 @@
 # IKEA
 <div>
-    <img src="https://user-images.githubusercontent.com/60219368/76086719-00e8b400-5ff8-11ea-9e00-cfaf3ca898bc.jpg" width="80%" title="ikea_pc" alt="ikea_pc"></img>
+    <img src="https://user-images.githubusercontent.com/60219368/76086719-00e8b400-5ff8-11ea-9e00-cfaf3ca898bc.jpg" width="70%" title="ikea_pc" alt="ikea_pc"></img>
     <img src="https://user-images.githubusercontent.com/60219368/76086804-31c8e900-5ff8-11ea-9af1-98ac508cba00.jpg" width="20%" title="ikea_mobile" alt="ikea_mobile"></img>
 </div>
 
