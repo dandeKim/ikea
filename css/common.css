@@ -415,7 +415,7 @@ header .header_box .header_rightbox .header_icon button:first-child {
   color: #f43041;
 }
 
-.open_menu .gnb .container .all_products_list,
+.open_menu .gnb .container .all_products_list_container .all_products_list,
 .open_menu .gnb .gnb_active_product,
 .open_menu .gnb .gnb_bg {
   display: block;
@@ -479,11 +479,15 @@ header .header_box .header_rightbox .header_icon button:first-child {
           transform: rotate(180deg);
 }
 
-.gnb .container .all_products_list {
+.gnb .container .all_products_list_container {
+  position: relative;
+}
+
+.gnb .container .all_products_list_container .all_products_list {
   z-index: 3;
   display: none;
   position: absolute;
-  top: 55px;
+  top: 15px;
   height: 0;
   background: none;
   padding: 10px 0;
@@ -493,7 +497,7 @@ header .header_box .header_rightbox .header_icon button:first-child {
   transition: height 0.5s;
 }
 
-.gnb .container .all_products_list > li {
+.gnb .container .all_products_list_container .all_products_list > li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,22 +512,22 @@ header .header_box .header_rightbox .header_icon button:first-child {
   border-bottom: 1px solid #f5f5f5;
 }
 
-.gnb .container .all_products_list > li:first-of-type {
+.gnb .container .all_products_list_container .all_products_list > li:first-of-type {
   border-top: 1px solid #f5f5f5;
 }
 
-.gnb .container .all_products_list > li a {
+.gnb .container .all_products_list_container .all_products_list > li a {
   font-size: 14px;
   line-height: 50px;
 }
 
-.gnb .container .all_products_list > li.active > a {
+.gnb .container .all_products_list_container .all_products_list > li.active > a {
   z-index: 1;
   color: #0058a3;
   font-weight: 700;
 }
 
-.gnb .container .all_products_list > li.active .all_products_list_child {
+.gnb .container .all_products_list_container .all_products_list > li.active .all_products_list_child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -536,13 +540,13 @@ header .header_box .header_rightbox .header_icon button:first-child {
   padding-right: 100px;
 }
 
-.gnb .container .all_products_list > li.active .all_products_list_child div {
+.gnb .container .all_products_list_container .all_products_list > li.active .all_products_list_child div {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 25%;
           flex: 0 1 25%;
 }
 
-.gnb .container .all_products_list > li.active .all_products_list_child h3 a {
+.gnb .container .all_products_list_container .all_products_list > li.active .all_products_list_child h3 a {
   display: block;
   color: #0058a3;
   font-size: 14px;
@@ -550,35 +554,36 @@ header .header_box .header_rightbox .header_icon button:first-child {
   margin-bottom: 30px;
 }
 
-.gnb .container .all_products_list > li.active .all_products_list_child a {
+.gnb .container .all_products_list_container .all_products_list > li.active .all_products_list_child a {
   line-height: 30px;
   font-size: 14px;
 }
 
-.gnb .container .all_products_list > li i {
+.gnb .container .all_products_list_container .all_products_list > li i {
   display: none;
 }
 
-.gnb .container .all_products_list > li i.sp {
+.gnb .container .all_products_list_container .all_products_list > li i.sp {
   z-index: 1;
   display: inline-block;
   margin-right: 10px;
 }
 
-.gnb .container .all_products_list .all_products_list_child {
+.gnb .container .all_products_list_container .all_products_list .all_products_list_child {
   display: none;
 }
 
-.gnb .container .all_products_list .all_products_list_child a:hover {
+.gnb .container .all_products_list_container .all_products_list .all_products_list_child a:hover {
   color: #0058a3;
 }
 
 .gnb .gnb_active_product {
+  z-index: 3;
   display: none;
   position: absolute;
-  top: 10px;
+  top: 25px;
   left: 0;
-  width: 100%;
+  width: 251px;
   height: 50px;
   background: #fee24d;
   -webkit-transition: top 0.3s;
@@ -1166,7 +1171,7 @@ section {
       grid-template-rows: repeat(2, 1fr);
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
-      grid-template-areas: "info info info news news" "info info info news news";
+      grid-template-areas: "info info info news news" "info info info news news";
   height: 510px;
 }
 

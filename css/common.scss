@@ -329,7 +329,7 @@ header {
 // open_menu
 .open_menu {
   .gnb {
-    .container .all_products_list,
+    .container .all_products_list_container .all_products_list,
     .gnb_active_product,
     .gnb_bg {
       display: block;
@@ -371,85 +371,89 @@ header {
         }
       }
     }
-    .all_products_list {
-      z-index: 3;
-      display: none;
-      position: absolute;
-      top: 55px;
-      height: 0;
-      background: none;
-      padding: 10px 0;
-      border-left: 1px solid #f5f5f5;
-      border-right: 1px solid #f5f5f5;
-      transition: height 0.5s;
-      > li {
-        &:first-of-type {
-          border-top: 1px solid #f5f5f5;
-        }
-        display: flex;
-        width: 250px;
-        height: 50px;
-        padding-left: 20px;
-        align-items: center;
-        box-sizing: border-box;
-        border-bottom: 1px solid #f5f5f5;
-        a {
-          font-size: 14px;
-          line-height: 50px;
-        }
-        &.active {
-          > a {
-            z-index: 1;
-            color: #0058a3;
-            font-weight: 700;
-          }
-          .all_products_list_child {
-            display: flex;
-            position: absolute;
-            top: 40px;
-            left: 300px;
-            width: 1110px;
-            box-sizing: border-box;
-            padding-right: 100px;
-            div {
-              flex: 0 1 25%;
-            }
-            h3 a {
-              display: block;
-              color: #0058a3;
-              font-size: 14px;
-              font-weight: 700;
-              margin-bottom: 30px;
-            }
-            a {
-              line-height: 30px;
-              font-size: 14px;
-            }
-          }
-        }
-        i {
-          display: none;
-          &.sp {
-            z-index: 1;
-            display: inline-block;
-            margin-right: 10px;
-          }
-        }
-      }
-      .all_products_list_child {
+    .all_products_list_container{
+      position: relative;
+      .all_products_list {
+        z-index: 3;
         display: none;
-        a:hover {
-          color: #0058a3;
+        position: absolute;
+        top: 15px;
+        height: 0;
+        background: none;
+        padding: 10px 0;
+        border-left: 1px solid #f5f5f5;
+        border-right: 1px solid #f5f5f5;
+        transition: height 0.5s;
+        > li {
+          &:first-of-type {
+            border-top: 1px solid #f5f5f5;
+          }
+          display: flex;
+          width: 250px;
+          height: 50px;
+          padding-left: 20px;
+          align-items: center;
+          box-sizing: border-box;
+          border-bottom: 1px solid #f5f5f5;
+          a {
+            font-size: 14px;
+            line-height: 50px;
+          }
+          &.active {
+            > a {
+              z-index: 1;
+              color: #0058a3;
+              font-weight: 700;
+            }
+            .all_products_list_child {
+              display: flex;
+              position: absolute;
+              top: 40px;
+              left: 300px;
+              width: 1110px;
+              box-sizing: border-box;
+              padding-right: 100px;
+              div {
+                flex: 0 1 25%;
+              }
+              h3 a {
+                display: block;
+                color: #0058a3;
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 30px;
+              }
+              a {
+                line-height: 30px;
+                font-size: 14px;
+              }
+            }
+          }
+          i {
+            display: none;
+            &.sp {
+              z-index: 1;
+              display: inline-block;
+              margin-right: 10px;
+            }
+          }
+        }
+        .all_products_list_child {
+          display: none;
+          a:hover {
+            color: #0058a3;
+          }
         }
       }
     }
   }
   .gnb_active_product {
+    z-index: 3;
     display: none;
     position: absolute;
-    top: 10px;
+    top: 25px;
     left: 0;
-    width: 100%;
+    width: 251px;
     height: 50px;
     background: #fee24d;
     transition: top 0.3s;
