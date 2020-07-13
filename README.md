@@ -25,7 +25,7 @@
     - 로그인 페이지
 
 - <a href="https://www.ikea.com/kr/ko/" target="_blank">기존 사이트</a>
-- <a href="https://ofkande.github.io/ikea/" target="_blank">리뉴얼 사이트</a>
+- <a href="https://dandekim.github.io/ikea/" target="_blank">리뉴얼 사이트</a>
 
 ## ikea.js
 - **Main Slide** : swiper 플러그인 사용
